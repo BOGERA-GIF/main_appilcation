@@ -201,7 +201,7 @@ class _ChatState extends State<Chat> {
       Container(
           decoration: BoxDecoration(color: Theme.of(context).cardColor),
           child: IconTheme(
-            data: IconThemeData(color: Theme.of(context).accentColor),
+            data: IconThemeData(color: Theme.of(context).colorScheme.secondary),
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(

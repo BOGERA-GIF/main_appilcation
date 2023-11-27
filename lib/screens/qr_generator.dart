@@ -32,12 +32,21 @@ class _QRGeneratorState extends State<QRGenerator> {
         title: const Text(' QR Generator'),
         backgroundColor: Colors.pink,
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Column(
-              children: [
+//   children: [
+//     QrImage(
+//       data: text,
+//       version: QrVersions.auto,
+//       size: 200.0,
+//     ),
+//     // Other widgets
+//   ],
+// )
+
                 // TextFormField(
                 //   decoration: const InputDecoration(
                 //     labelText: 'Enter your text for QR code',
@@ -48,11 +57,11 @@ class _QRGeneratorState extends State<QRGenerator> {
                 //   maxLines: 1,
                 //   keyboardType: TextInputType.text,
                 // ),
-                QrImage(
-                  data: text,
-                  version: QrVersions.auto,
-                  size: 200.0,
-                ),
+                // QrImage(
+                //   data: text,
+                //   version: QrVersions.auto,
+                //   size: 200.0,
+                // ),
                 // ElevatedButton(
                 //   onPressed: () => Navigator.push(
                 //     context,
@@ -71,8 +80,8 @@ class _QRGeneratorState extends State<QRGenerator> {
                 //     ),
                 //   ),
                 // ),
-              ],
-            ),
+
+                ),
           ),
         ),
       ),

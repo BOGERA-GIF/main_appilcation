@@ -15,6 +15,10 @@ import 'package:path_provider/path_provider.dart';
 import 'package:ug_blood_donate/components/buttom_navigation_left_button.dart';
 import 'package:ug_blood_donate/screens/home_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+// Import for Android features.
+//import 'package:webview_flutter_android/webview_flutter_android.dart';
+// Import for iOS features.
+import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 import 'second_screen.dart';
 
@@ -80,6 +84,8 @@ class WebViewExample extends StatefulWidget {
 
   final CookieManager? cookieManager;
 
+
+
   @override
   State<WebViewExample> createState() => _WebViewExampleState();
 }
@@ -95,30 +101,29 @@ class _WebViewExampleState extends State<WebViewExample> {
     if (Platform.isAndroid) {
       WebView.platform = SurfaceAndroidWebView();
     }
-
   }
+
   @override
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-     var user = FirebaseAuth.instance.authStateChanges().listen((user) {
-          if (user == null) {
-             Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) =>  Onboarding()),
-  );
+    var user = FirebaseAuth.instance.authStateChanges().listen((user) {
+      if (user == null) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Onboarding()),
+        );
 
-            // Navigator.of(context)
-            //     .pushReplacement(ThisIsFadeRoute(Onboarding(), Onboarding()));
-          } else {
-            print('User is signed in!');
-Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) =>   LeftButton()),
-  );
-           
-          }
-        });
+        // Navigator.of(context)
+        //     .pushReplacement(ThisIsFadeRoute(Onboarding(), Onboarding()));
+      } else {
+        print('User is signed in!');
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => LeftButton()),
+        );
+      }
+    });
   }
 
   @override
@@ -129,7 +134,7 @@ Navigator.push(
         shadowColor: Colors.transparent,
         foregroundColor: Colors.transparent,
         // ignore: deprecated_member_use
-        backwardsCompatibility: true,
+        // backwardsCompatibility: true,
         backgroundColor: Colors.transparent,
         bottomOpacity: 0.0,
         title: Center(child: const Text('Twitter Feeds.')),
