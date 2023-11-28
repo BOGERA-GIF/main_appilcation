@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "715628980929",
+    "project_id": "my-firebase-project-2dbc5",
+    "storage_bucket": "my-firebase-project-2dbc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715628980929:android:ce7374629f374950ca4240",
+        "android_client_info": {
+          "package_name": "com.example.geo_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvodGqgmKWBGiINzQLGhaJ6GbgQ7QPCFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

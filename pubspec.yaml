@@ -1,4 +1,4 @@
-name: ug_blood_donate
+name: geo_app
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -38,7 +38,7 @@ dependencies:
   flutter_staggered_animations: ^1.1.1
   anim_search_bar: ^2.0.2
   firebase_core: ^1.22.0
-  cloud_firestore: ^3.4.8
+  cloud_firestore: ^4.13.3
   firebase_auth: ^3.9.0
   modal_progress_hud_nsn: ^0.4.0
 
